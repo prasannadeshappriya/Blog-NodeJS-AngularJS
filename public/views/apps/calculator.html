@@ -1,0 +1,30 @@
+<div class="container" ng-controller="MainController">
+    <div>
+        <div ng-view></div>
+    </div>
+    <h1>Simple angular calculater</h1>
+    <div col-xs-12>
+        <div class="col-xs-6">
+            <label for="first_num" class="control-label">First Number: </label>
+            <input type="text" class="form-control" id="first_num" ng-model="first_num">
+            <p style="color: red" ng-show="showFirstNumberError"><strong>First number is required!</strong></p>
+        </div>
+        <div class="col-xs-6">
+            <label for="second_num" class="control-label">Second Number: </label>
+            <input type="text" class="form-control" id="second_num" ng-model="second_num">
+            <p style="color: red" ng-show="showSecondNumberError"><strong>First number is required!</strong></p>
+        </div>
+    </div>
+    <div class="col-xs-6 col-xs-offset-3" style="margin-top: 20px">
+
+        <input type="button" style="width: 110px; margin-right: 10px" class="btn btn-success" ng-click="btnAddition()" value="+">
+        <input type="button" style="width: 110px; margin-right: 10px" class="btn btn-success" ng-click="btnSubscription()" value="+">
+        <input type="button" style="width: 110px; margin-right: 10px" class="btn btn-success" ng-click="btnMultiply()" value="+">
+        <input type="button" style="width: 110px" class="btn btn-success" ng-click="btnDavide" value="+">
+    </div>
+    <div col-xs-12>
+        <div class="col-xs-6" ng-show="showAnswer">
+            <h2>Display: {{answer}}</h2>
+        </div>
+    </div>
+</div>

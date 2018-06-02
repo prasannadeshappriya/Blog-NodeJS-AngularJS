@@ -1,0 +1,93 @@
+/*Site Body*/
+body{
+    padding-top: 50px;
+}
+
+/*Home Page*/
+.home-image{
+    opacity: 1.0;
+    float:left;
+    margin-right:25px;
+    margin-bottom: 10px;
+}
+
+.nav-brand-image{
+    margin-top: 5px;
+    margin-bottom: -5px;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: #e7e7e7;
+}
+
+.image_border_home{
+    border: 2px solid #DCDCDC;
+    width: 280px;
+    margin-top: 25px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.image_content{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.image_content p{
+    font : bold 22px Garamond;
+}
+
+.image_content span{
+    /*font-size: 20px;*/
+    font : 15px Arial;
+}
+
+.home-content{
+    font-size: 16px;
+    margin-top: 25px;
+}
+
+@media (max-width: 400px) {
+    .home-image{
+        opacity: 1.0;
+        float:left;
+        margin-right:25px;
+        margin-bottom: 25px;
+    }
+}
+
+/*Contact Page*/
+.contact-page-right{
+    border: 1px solid #F8F8F8;
+    padding: 20px;
+}
+.contact-page-right h4{
+    font-weight: bold;
+}
+.contact-page-right span{
+    font-weight: bold;
+}
+.contact-page-left{
+    padding: 20px;
+}
+.contact-page-left h4{
+    font-weight: bold;
+}
+.contact-input{
+    width: 70%;
+    resize: none;
+}
+@media (max-width: 1200px) {
+    .contact-main{
+        display: flex; flex-direction: column-reverse;
+    }
+    .contact-page-right{
+        border: 1px solid #F8F8F8;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    .contact-input{
+        width: 100%;
+        resize: none;
+    }
+}

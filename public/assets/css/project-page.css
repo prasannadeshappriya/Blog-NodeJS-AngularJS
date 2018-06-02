@@ -1,0 +1,46 @@
+.project-image{
+    opacity: 1.0;
+    float:left;
+    margin-right: 20px;
+    margin-top: 5px;
+    display: inline;
+}
+
+.project-image-screenshot{
+    margin-top: 20px;
+    margin-right: 20px;
+    display: inline;
+}
+
+.project-list .h4{
+    display: inline;
+}
+
+.project-list .p{
+    display: inline;
+}
+
+.project-page-right{
+    padding: 20px;
+}
+.project-page-left{
+    padding: 20px;
+}
+
+@media (max-width: 1200px) {
+    .project-page-right{
+        display: none;
+    }
+    .project-input{
+        width: 100%;
+        resize: none;
+    }
+}
+
+.readmore-anchor{
+    display: inline;
+    float: right;
+    color: #a9d300;
+    text-transform: uppercase;
+    font-weight: bold;
+}

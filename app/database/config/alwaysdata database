@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "prasanna_blog",
+    "password": "pRa@4097",
+    "database": "prasanna_database",
+    "host": "mysql-prasanna.alwaysdata.net",
+    "operatorsAliases": false,
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "prasanna_blog",
+    "password": "pRa@4097",
+    "database": "prasanna_database",
+    "host": "mysql-prasanna.alwaysdata.net",
+    "operatorsAliases": false,
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "prasanna_blog",
+    "password": "pRa@4097",
+    "database": "prasanna_database",
+    "host": "mysql-prasanna.alwaysdata.net",
+    "operatorsAliases": false,
+    "dialect": "mysql"
+  }
+}
