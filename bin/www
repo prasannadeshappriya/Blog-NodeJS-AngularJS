@@ -26,10 +26,10 @@ var server = http.createServer(app);
  */
  
 // server.listen(port, function(){
-//    console.log('server listing at http://localhost:%s', server.address().port);
+//    console.log('Server listing at http://localhost:%s', server.address().port);
 // });
 server.listen(process.env.ALWAYSDATA_HTTPD_PORT, process.env.ALWAYSDATA_HTTPD_IP, function(){
-    console.log('server listing at https://alwaysdata.net:%s', server.address().port);
+    console.log('Server listing at https://alwaysdata.net:%s', server.address().port);
 });
 
 server.on('error', onError);

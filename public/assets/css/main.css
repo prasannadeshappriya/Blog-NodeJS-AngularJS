@@ -91,3 +91,19 @@ body{
         resize: none;
     }
 }
+
+/*Train Schedule tables*/
+.table-results{
+    margin-top: 50px;
+}
+
+@media (max-width: 994px) {
+    .table-results{
+        margin-top: 70px;
+        margin-left:20px;
+        margin-right:20px;
+    }
+    .mobile_view{
+        display: none;
+    }
+}

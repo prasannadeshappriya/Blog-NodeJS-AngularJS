@@ -3,6 +3,7 @@
  */
 const scraper = require('cloudscraper');
 const cheerio = require("cheerio");
+const cheerioTableparser = require('cheerio-tableparser');
 const tableToJson = require('tabletojson');
 
 //Constants
@@ -65,6 +66,7 @@ module.exports = {
         //108 -> 246
         let start_station_item = await trainStationRepository.getTrainStation(schedule.start_station);
         let end_station_item = await trainStationRepository.getTrainStation(schedule.end_station);
+
         //validation
         if(start_station_item===null || end_station_item===null){
             return callback("Invalid station");
@@ -125,26 +127,51 @@ module.exports = {
                             });
                         let $ = cheerio.load(body),
                             $connected_trains_table= $('.hero-unit');
+
+                        cheerioTableparser($);
+                        let data = $(".table").parsetable();
+
                         let connected_train_tables = [];
-                        Object.keys($connected_trains_table)
-                            .forEach(function (key) {
-                                let connected_train_code = $connected_trains_table[key];
-                                let connected_train_table = tableToJson.convert(connected_train_code);
-                                for(let item in connected_train_table) {
-                                    for(let i=0; i<connected_train_table[item].length; i++){
-                                        let table_item = connected_train_table[item][i];
-                                        if(Object.keys(connected_train_table[item][i]).length===6){
-                                            let tmpObj = {};
-                                            Object.keys(table_item)
-                                                .forEach(function (key) {
-                                                    tmpObj[key] = table_item[key];
-                                                });
-                                            connected_train_tables.push(tmpObj);
-                                            results.connected.push(tmpObj);
-                                        }
-                                    }
-                                }
-                            });
+                        for(let $i=0; $i< data[4].length; $i++){
+                            let item = data[4][$i];
+                            if(item.length===8){
+                                let itemObj = {};
+                                itemObj["Name"] =  data[4][$i];
+                                itemObj["Your Station"] =  schedule.start_station;
+                                itemObj["End Time"] = schedule.end_station;
+
+                                $ = cheerio.load(data[1][$i]);
+                                itemObj["Start Time"] = $('font').text();
+
+                                $ = cheerio.load(data[2][$i]);
+                                itemObj["End Station"] = $('font').text();
+                                connected_train_tables.push(itemObj);
+                                results.connected.push(itemObj);
+                            }
+                        }
+
+                        //-----------------------------------Old Method, Changed Due to Missing Data -------------------
+                        // let connected_train_tables = [];
+                        // Object.keys($connected_trains_table)
+                        //     .forEach(function (key) {
+                        //         let connected_train_code = $connected_trains_table[key];
+                        //         let connected_train_table = tableToJson.convert(connected_train_code);
+                        //         for(let item in connected_train_table) {
+                        //             for(let i=0; i<connected_train_table[item].length; i++){
+                        //                 let table_item = connected_train_table[item][i];
+                        //                 if(Object.keys(connected_train_table[item][i]).length===6){
+                        //                     let tmpObj = {};
+                        //                     Object.keys(table_item)
+                        //                         .forEach(function (key) {
+                        //                             tmpObj[key] = table_item[key];
+                        //                         });
+                        //                     connected_train_tables.push(tmpObj);
+                        //                     results.connected.push(tmpObj);
+                        //                 }
+                        //             }
+                        //         }
+                        //     });
+
                         if(results.normal.length===0 && results.connected.length===0){
                             await loadOfflineResults(dateId, schedule, async function (offlineResults) {
                                 try{
