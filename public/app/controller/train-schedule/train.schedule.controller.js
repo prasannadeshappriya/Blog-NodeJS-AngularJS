@@ -97,6 +97,7 @@ app.controller('TrainScheduleController',[
                 }
             }catch (err){
                 $scope.isLoading = false;
+                $scope.$apply();
                 console.log(err);
             }
         };
