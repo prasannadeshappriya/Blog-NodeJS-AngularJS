@@ -5,7 +5,7 @@ let app = angular.module('MyBlog', [
 
 //Configure the constants
 app.constant(
-    'host_url', 'https://localhost:3000/api/trainscheduleapp/'
+    'host_url', 'https://prasanna.alwaysdata.net/api/trainscheduleapp/'
 );
 
 //Alwaysdata.net Link:
