@@ -70,7 +70,8 @@
                 </div>
             </div>
             <div class="col-xs-12 text-center">
-                <input type="button" value="Search" ng-click="search()" class="btn btn-success" style="width: 150px; margin-top: 15px">
+                <input type="button" value="Search" ng-click="search()" class="btn btn-success"
+                       style="width: 150px; margin-top: 15px; margin-bottom: 20px">
             </div>
         </div>
         <div class="table-results">
@@ -105,7 +106,7 @@
                     <tr>
                         <th>Arrival</th>
                         <th>Depature</th>
-                        <th class="mobile_view">Frequency</th>
+                        <th>Frequency</th>
                         <th class="mobile_view">Type</th>
                         <th class="mobile_view">Name</th>
                         <th class="mobile_view">Destination / Time</th>
@@ -116,7 +117,7 @@
                     <tr ng-repeat-start="item in normal_results" class="success">
                         <td style="color: blue;"><b>{{item["Arrival Time"]}}</b></td>
                         <td style="color: red;"><b>{{item["Departure Time"]}}</b></td>
-                        <td class="mobile_view">{{item["Frequency"]}}</td>
+                        <td>{{item["Frequency"]}}</td>
                         <td class="mobile_view">{{item["Type"]}}</td>
                         <td class="mobile_view">{{item["Name"]}}</td>
                         <td class="mobile_view">{{item["Destination / Time"]}}</td>
