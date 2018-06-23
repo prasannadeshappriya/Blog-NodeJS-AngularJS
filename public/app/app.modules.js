@@ -1,6 +1,7 @@
 let app = angular.module('MyBlog', [
     'ngStorage',
     'ngRoute',
+    'ngMeta'
 ]);
 
 //Configure the constants
