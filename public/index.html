@@ -71,12 +71,12 @@
     <script src="app/services/page.refresh.service.js"></script>
     <script src="app/services/project.change.service.js"></script>
 </head>
-<body ng-controller="MainController">
+<body ng-controller="MainController" style="">
     <!--Include navigation menu-->
     <div ng-include="'views/menu/navigation-bar.html'"></div>
 
     <!--Show route contents-->
-    <div ng-view style="margin-top: 0%"></div>
+    <div ng-view class="stretch-ng-view"></div>
 
     <!--Include footer-->
     <div ng-include="'views/common/footer.html'"></div>

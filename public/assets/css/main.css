@@ -1,9 +1,22 @@
+/*html*/
+html{
+    min-height: 100%;
+}
+
 /*Site Body*/
 body{
     padding-top: 50px;
+    min-height: 100vh;
 }
 
-/*Home Page*/
+/*For Draw the elements in entire screen*/
+/*vh for View-Port-Height*/
+.stretch-ng-view{
+    min-height: 100vh;
+    margin-top: 0%;
+}
+
+    /*Home Page*/
 .home-image{
     opacity: 1.0;
     float:left;
