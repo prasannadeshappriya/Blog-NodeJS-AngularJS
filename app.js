@@ -4,15 +4,16 @@ let favicon = require('serve-favicon');
 let logger = require('morgan');
 let cookieParser = require('cookie-parser');
 let bodyParser = require('body-parser');
+let prerender = require('prerender-node');
 
 let routes = require('./app/routes/index');
 let cors = require('cors');
-let prerender = require('prerender-node');
 let app = express();
 app.use(cors());
 
-// view engine setup
-console.log((__dirname));
+//Setup prerender.io for search engines
+require('./config/google-seo')(prerender);
+app.use(prerender);
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -20,9 +21,6 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(prerender.set('prerenderToken',
-    'EHVldc3mgBLxusUIMC6J')
-);
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api', routes);
