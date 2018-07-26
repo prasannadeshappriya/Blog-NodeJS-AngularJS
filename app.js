@@ -12,11 +12,12 @@ let app = express();
 app.use(cors());
 
 //Setup prerender.io for search engines
+//Dynamic content does not crowl correctly by google, temporary delete this
+/*
 require('./config/google-seo')(prerender);
 app.use(prerender);
+*/
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
