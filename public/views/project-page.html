@@ -2,6 +2,7 @@
     <div class="row">
         <div class="col-lg-8 project-page-left">
             <div ng-if="project_0">
+                <div ng-include="'views/project-page/project-chatbot.html'"></div>
                 <div ng-include="'views/project-page/project-robot-tailor.html'"></div>
                 <div ng-include="'views/project-page/project-moodle-mobile-app.html'"></div>
                 <div ng-include="'views/project-page/project-train-schedule.html'"></div>
@@ -17,9 +18,18 @@
             <div ng-if="project_5">
                 <div ng-include="'views/project-page/source/source-slt-usage-app.html'"></div>
             </div>
+            <div ng-if="project_6">
+                <div ng-include="'views/project-page/source/source-chatbot-app.html'"></div>
+            </div>
         </div>
         <div class="col-lg-4 project-page-right">
             <h4 style="margin-bottom: 20px"><b>PROJECTS</b></h4>
+            <div class="project-list">
+                <img src="assets/images/project-images/chatbot_icon.png" width="50" height="50" class="img-responsive project-image"/>
+                <h4>CHAT-BOT</h4>
+                <p>Skype assistant to help the employees at Eyepax IT(Pvt)Ltd.</p>
+            </div>
+            <hr>
             <div class="project-list">
                 <img src="assets/images/project-images/robot_tailor_icon.png" width="50" height="50" class="img-responsive project-image"/>
                 <h4>ROBOT TAILOR</h4>

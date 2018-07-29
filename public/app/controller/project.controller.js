@@ -18,6 +18,8 @@ app.controller('ProjectController',
                 $scope.project_4 = ProjectChangeService.getProject(4);
                 //5->SLT Usage
                 $scope.project_5 = ProjectChangeService.getProject(5);
+                //6->Chat-Bot Project
+                $scope.project_6 = ProjectChangeService.getProject(6);
             }
 
             $scope.$watch(ProjectChangeService.getCurrent, function (newValue) {
@@ -25,6 +27,7 @@ app.controller('ProjectController',
             },true);
 
             $scope.setCurrent = function (num) {
+                console.log(num);
                 ProjectChangeService.setCurrent(num);
             };
 }]);

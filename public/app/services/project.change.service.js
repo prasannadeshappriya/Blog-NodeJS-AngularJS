@@ -10,7 +10,8 @@ angular.module('MyBlog').factory('ProjectChangeService', [function () {
     //3->Train Schedule
     //4->Device Controller
     //5->SLT Usage
-    let arrProject = [true, false, false, false, false, false];
+    //6->Chat-Bot
+    let arrProject = [true, false, false, false, false, false, false];
 
     let service = {};
     service.getCurrent = getCurrent;
