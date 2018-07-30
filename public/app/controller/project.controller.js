@@ -27,7 +27,6 @@ app.controller('ProjectController',
             },true);
 
             $scope.setCurrent = function (num) {
-                console.log(num);
                 ProjectChangeService.setCurrent(num);
             };
 }]);
