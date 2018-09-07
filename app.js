@@ -29,7 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //Routes for static files, SEO and other purposes
 app.get('/sitemap.xml', function(req, res, next) {
     return res.status(200).sendFile(
-        'assets/files/sitemap.xml',
+        'dist/assets/files/sitemap.xml',
         {root: './public'});});
 
 app.use('/api', routes);
