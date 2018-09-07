@@ -168,6 +168,12 @@ gulp.task('fonts', function() {
         .pipe(gulp.dest('./public/dist/assets/fonts'));
 });
 
+// Fonts
+gulp.task('files', function() {
+    return gulp.src(paths.files)
+        .pipe(gulp.dest('./public/dist/assets/files'));
+});
+
 // Gulp task to minify HTML files
 gulp.task('views', function() {
     return gulp.src(paths.views)
