@@ -5,6 +5,7 @@ let logger = require('morgan');
 let cookieParser = require('cookie-parser');
 let bodyParser = require('body-parser');
 let prerender = require('prerender-node');
+let compression = require('compression');
 
 let routes = require('./app/routes/index');
 let cors = require('cors');
@@ -18,6 +19,7 @@ require('./config/google-seo')(prerender);
 app.use(prerender);
 */
 
+app.use(compression());
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
