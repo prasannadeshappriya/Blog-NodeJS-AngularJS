@@ -66,7 +66,7 @@ const paths = {
         './public/src/views/**/*.html'
     ],
     favicon: [
-        './public/src/favicon.ico'
+        './public/src/favicon.png'
     ],
     index: [
         './public/src/index.html'
