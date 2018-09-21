@@ -60,7 +60,8 @@ const paths = {
     ],
     files :[
         './public/src/assets/files/MoodleUOM.apk',
-        './public/src/assets/files/sitemap.xml'
+        './public/src/assets/files/sitemap.xml',
+        './public/src/assets/files/Final CV 2018-Sept.pdf'
     ],
     views: [
         './public/src/views/**/*.html'
