@@ -82,6 +82,28 @@ angular.module('MyBlog').config(['$routeProvider','$locationProvider',
                 }
             }
         })
+        .when("/articles", {
+            //Home page
+            templateUrl : "dist/views/article-page.html",
+            controller: 'MainController',
+            resolve:{
+                init : function () {
+                    //Nothing here for now
+                    console.log('article page route triggered');
+                }
+            }
+        })
+        .when("/articles/host-nodejs-server", {
+            //Home page
+            templateUrl : "dist/views/article-page/source/alwaysdata-nodejs-hosting-article.html",
+            controller: 'MainController',
+            resolve:{
+                init : function () {
+                    //Nothing here for now
+                    console.log('article page [alwaysdata-nodejs-hosting-article] route triggered');
+                }
+            }
+        })
         .when("/contact", {
             //contact page
             templateUrl : "dist/views/contact-page.html",

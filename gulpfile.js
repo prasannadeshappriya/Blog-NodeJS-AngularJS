@@ -75,7 +75,8 @@ const paths = {
     images: [
         './public/src/assets/images/**/*.jpg',
         './public/src/assets/images/**/*.png',
-        './public/src/assets/images/**/*.gif'
+        './public/src/assets/images/**/*.gif',
+        './public/src/assets/images/**/*.svg'
     ],
 };
 
