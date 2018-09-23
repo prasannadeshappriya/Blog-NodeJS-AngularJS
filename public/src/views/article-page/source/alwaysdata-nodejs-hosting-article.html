@@ -1,6 +1,6 @@
-<div class="container" ng-controller="ProjectController">
+<div class="container">
     <div class="row">
-        <div class="col-lg-8 project-page-left">
+        <div class="col-lg-8 article-page-left">
             <div style="margin-bottom: 50px">
                 <h4><b>How to host NodeJS Express server on Alwaysdata.net</b></h4>
                 <p><b>Last Updated:</b> September 22, 2018 <br></p>
@@ -271,14 +271,17 @@
                     <br><br>
                     <span style="font-weight: bold; font-size: 16px">Video tutorial:</span><br>
                 </p>
-                <iframe width="560" height="315"
-                        src="https://www.youtube.com/embed/zzwdLrSNgJw?rel=0"
-                        frameborder="0"
-                        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <div class="article-responsive-video">
+                    <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/zzwdLrSNgJw?rel=0"
+                            frameborder="0"
+                            allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
-        <div class="col-lg-4 project-page-right">
-            <div ng-include="'dist/views/side-menu/project-menu-outer.html'"></div>
+        <div class="col-lg-4 article-page-right">
+            <div class="article-page-right-content"
+                 ng-include="'dist/views/side-menu/project-menu-outer.html'"></div>
         </div>
     </div>
 </div>

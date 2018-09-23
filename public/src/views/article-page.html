@@ -1,10 +1,11 @@
 <div class="container" ng-controller="ProjectController">
     <div class="row">
-        <div class="col-lg-8 project-page-left">
+        <div class="col-lg-8 article-page-left">
             <div ng-include="'dist/views/article-page/nodejs-express-hosting.html'"></div>
         </div>
-        <div class="col-lg-4 project-page-right">
-            <div ng-include="'dist/views/side-menu/project-menu-outer.html'"></div>
+        <div class="col-lg-4 article-page-right">
+            <div class="article-page-right-content"
+                 ng-include="'dist/views/side-menu/project-menu-outer.html'"></div>
         </div>
     </div>
 </div>

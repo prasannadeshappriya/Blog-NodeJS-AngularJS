@@ -82,6 +82,17 @@ angular.module('MyBlog').config(['$routeProvider','$locationProvider',
                 }
             }
         })
+        .when("/cv", {
+            //Home page
+            templateUrl : "dist/views/cv-page.html",
+            controller: 'MainController',
+            resolve:{
+                init : function () {
+                    //Nothing here for now
+                    console.log('cv page route triggered');
+                }
+            }
+        })
         .when("/articles", {
             //Home page
             templateUrl : "dist/views/article-page.html",

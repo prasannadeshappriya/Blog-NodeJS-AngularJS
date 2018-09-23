@@ -27,13 +27,45 @@
     padding: 20px;
 }
 
+.article-page-right{
+    padding: 20px;
+}
+.article-page-right-content{
+}
+.article-page-left{
+    padding: 20px;
+    min-height: 100%;
+}
+.article-responsive-video{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+.article-responsive-video iframe{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 @media (max-width: 1200px) {
     .project-page-right{
+        display: none;
+    }
+    .article-page-right{
         display: none;
     }
     .project-input{
         width: 100%;
         resize: none;
+    }
+}
+
+@media (max-width: 994px) {
+    .git-hub-calender{
+        display: none;
     }
 }
 
