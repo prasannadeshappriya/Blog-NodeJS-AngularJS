@@ -20,6 +20,8 @@ angular.module('MyBlog').controller('ProjectController',
                 $scope.project_5 = ProjectChangeService.getProject(5);
                 //6->Chat-Bot Project
                 $scope.project_6 = ProjectChangeService.getProject(6);
+                //7->Fabric Defect Detection System
+                $scope.project_7 = ProjectChangeService.getProject(7);
             }
 
             $scope.$watch(ProjectChangeService.getCurrent, function (newValue) {
